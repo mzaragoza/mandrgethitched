@@ -7,8 +7,8 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.3'
-# Use sqlite3 as the database for Active Record
+gem 'rails', '~> 5.0.2'
+#databases
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -41,13 +41,24 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "better_errors"                                                                # Better error page for Rack apps
+  gem "binding_of_caller"                                                            # Retrieve the binding of a method's caller
+  gem 'letter_opener'                                                                # Preview mail in the browser instead of sending.
+  gem 'listen', '~> 3.0.5'                                                           # listens to file modifications and notifies you about the changes
+  gem 'spring'                                                                       # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring-watcher-listen', '~> 2.0.0'                                            # This gem makes Spring watch the filesystem for changes using Listen rather than by polling the filesystem.
+  gem 'web-console'                                                                  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  # gem 'capistrano-rails'                                                           # Use Capistrano for deployment
+  gem 'ffaker'                                                                       # Create Data
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "haml-rails"                                      # templating engine
+gem 'awesome_print'                                   # Pretty print your Ruby objects with style
+gem "font-awesome-rails"
+gem 'devise'                                          # Flexible authentication solution
+gem 'simple_form'                                     # Forms made easy for Rails! It's tied to a simple DSL
+gem 'decent_exposure'                                 # A helper for creating declarative interfaces in controllers
+

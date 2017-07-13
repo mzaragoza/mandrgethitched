@@ -1,0 +1,52 @@
+%section.wedding-block.section-scroll
+  %nav#nav-main
+    .container
+      .navbar.navbar-inverse
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav
+            %li.first
+              %a{:href => "#"}
+                = t(:the_wedding)
+                %i.fa.fa-heart{"aria-hidden" => "true"}
+            %li
+              %a{:href => "#"}
+                = t(:wedding_events)
+                %i.fa.fa-heart{"aria-hidden" => "true"}
+            %li
+              %a{:href => "#"}
+                = t(:rsvp)
+                %i.fa.fa-heart{"aria-hidden" => "true"}
+  .container
+    .title-main
+      %h2= t(:hello)
+      %p= t(:we_invite_you_to_celebrate_our_love)
+      .headin-img
+        %img{:alt => "", :src => "images/wedding-headingBg.png"}/
+    .wedding-member
+      #countdowncont.clearfix
+        %ul#countscript
+          %li
+            %span.days 00
+            %p= t(:days)
+          %li
+            %span.hours 00
+            %p= t(:hours)
+          %li.clearbox
+            %span.minutes 00
+            %p= p(:minutes)
+          %li
+            %span.seconds 00
+            %p= t(:seconds)
+      .row
+        .col-sm-5
+          .wedding-box
+            .img
+              %img{:alt => "", :src => "images/img1.jpg"}/
+            .name Yael & Moises
+            %p 
+

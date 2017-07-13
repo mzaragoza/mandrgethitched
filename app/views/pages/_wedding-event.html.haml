@@ -1,0 +1,35 @@
+%section.wedding-event.section-scroll
+  .container
+    .title-main
+      %h2= t(:the_wedding_event)
+      %p= t(:we_invite_you_to_celebrate_our_love)
+      .headin-img
+        %img{:alt => "", :src => "images/event-headingBg.png"}/
+    .row
+      .col-sm-6.col-md-7
+        .event-img
+          %img{:alt => "", :src => "images/img3.png"}/
+      .col-sm-6.col-md-5
+        .event-info
+          .event-slide.active
+            .event-title
+              %h3
+                = t(:wedding_party)
+                %span.icon
+            .event-content
+              .info-slide
+                .info-box
+                  %i.fa.fa-calendar
+                  = t(:wedding_date)
+                .info-box
+                  %i.fa.fa-clock-o
+                  11:30am
+                .info-box
+                  %i.fa.fa-map-marker
+                  Hyatt Regency Pier Sixty-Six
+                  %br
+                  2301 SE 17th St, Fort Lauderdale, FL 33316
+              %p 
+              .img
+                %img{:alt => "", :src => "images/event-img.png"}/
+

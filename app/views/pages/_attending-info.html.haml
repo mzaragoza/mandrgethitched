@@ -1,0 +1,52 @@
+%section.attending-info.section-scroll{:style => "background-image:url(images/attending-bg.png);"}
+  .container
+    .title-main
+      %h2= t(:are_you_attending)
+      %p= t(:rsvp_here)
+      .headin-img
+        %img{:alt => "", :src => "images/attending-headingBg.png"}/
+    -#= simple_form_for(@guest, :html => {:id => 'attending_form' }) do |f|
+      .row
+        .col-sm-6
+          .input-box
+            .icon
+              %img{:alt => "", :src => "images/user-icon.png"}/
+            %input{"data-validation" => "required", :name => "name", :placeholder => "#{t(:enter_name)}", :type => "text", value: "#{@guest.try(:name)}"}/
+        .col-sm-6
+          .input-box
+            .icon
+              %img{:alt => "", :src => "images/email-icon.png"}/
+            %input{"data-validation" => "email", "data-validation-error-msg" => "Incorrect e-mail address", :name => "email", :placeholder => "#{t(:enter_email)}", :type => "text", value: "#{@guest.try(:email)}"}/
+      .row
+        .col-sm-6
+          .select-box
+            .icon
+              %img{:alt => "", :src => "images/guest-icon.png"}/
+            %select#guests_select.select-style{:name => "guest_no"}
+              %option{:value => ""} Number of Guests
+              %option{:value => "0"} 0
+              %option{:value => "1"} 1
+              %option{:value => "2"} 2
+              %option{:value => "3"} 3
+              %option{:value => "4"} 4
+              %option{:value => "5"} 5
+        .col-sm-6
+          .select-box
+            .icon
+              %img{:alt => "", :src => "images/attend-icon.png"}/
+            %select#attend_select.select-style{:name => "attend"}
+              %option{:value => ""} Will You Attend?
+              %option{:value => "Yes"} Yes
+              %option{:value => "No"} No
+        .col-sm-12
+          .input-box.textarea
+            .icon
+              %img{:alt => "", :src => "images/note-icon.png"}/
+            %textarea{:name => "note", :placeholder => "Write your notes"}
+        .col-sm-12
+          .submit-slide
+            .submit-btn
+              .icon
+                %i.fa.fa-paper-plane-o
+              %input#attending_btn{:name => "contact", :type => "submit", :value => "Send"}/
+
